@@ -22,7 +22,7 @@ contract Lottery {
 
     function pickWinner() public restricted {
         uint index = random() % players.length;
-        players[index].transfer(this).balance);
+        players[index].transfer(this.balance);
         players = new address[](0);
     }
     modifier restricted() {                 //only the manager can call this
